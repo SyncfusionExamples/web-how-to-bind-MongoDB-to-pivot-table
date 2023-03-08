@@ -1,0 +1,57 @@
+﻿@page "/"
+@using Syncfusion.Blazor.PivotView
+@using MongoDB.Bson;
+@using MongoDB.Driver;
+@using MongoDB.Driver.Core.Authentication;
+
+<SfPivotView TValue="ProductDetails" Width="1000" Height="300" ShowFieldList="true">
+    <PivotViewDataSourceSettings TValue="ProductDetails" DataSource="@dataSource" ExpandAll=false EnableSorting=true>
+        <PivotViewColumns>
+                    <PivotViewColumn Name="Year"></PivotViewColumn>                    
+                </PivotViewColumns>
+                <PivotViewRows>
+                    <PivotViewRow Name="Country"></PivotViewRow>
+                    <PivotViewRow Name="Products"></PivotViewRow>
+                </PivotViewRows>
+                <PivotViewValues>
+                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+                </PivotViewValues>
+                <PivotViewFormatSettings>
+                    <PivotViewFormatSetting Name="Sold" Format="N2"></PivotViewFormatSetting>
+                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+                </PivotViewFormatSettings>
+            </PivotViewDataSourceSettings>
+            <PivotViewGridSettings ColumnWidth="120">
+            </PivotViewGridSettings>
+</SfPivotView>
+
+@code {
+    private List<ProductDetails> dataSource { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Replace with your own connection string.
+        string connectionString = "<Enter your valid connection string here>";
+        MongoClient client = new MongoClient(connectionString);
+        // Replace with your own database name in the following
+        IMongoDatabase database = client.GetDatabase("sample_training");
+        // Replace with your own collection name in the following
+        IMongoCollection<ProductDetails> collection = database.GetCollection<ProductDetails>("ProductDetails");
+        dataSource = collection.Find(new BsonDocument()).ToList();      
+    }
+
+
+    public class ProductDetails
+    {  
+        public ObjectId _id { get; set; }
+        public int Sold { get; set; }
+        public double Amount { get; set; }
+        public string Country { get; set; }
+        public string Products { get; set; }
+        public string Year { get; set; }
+        public string Quarter { get; set; }
+    }
+}
+
+

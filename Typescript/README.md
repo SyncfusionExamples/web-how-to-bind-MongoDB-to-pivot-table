@@ -1,8 +1,6 @@
-# How to bind MongoDB database to a Pivot Table
+# How to bind MongoDB to a Pivot Table
 
-A quick start project for connecting a MongoDB database to a Syncfusion Pivot Table. This repository includes a Web API Controller (PivotController) for retrieving data from a MongoDB database, as well as a quick start sample for the TypeScript platform that displays the retrieved data in a Pivot Table.
-
-**Documentation:** https://ej2.syncfusion.com/documentation/pivotview/getting-started/
+A quick start project for connecting a MongoDB to a Syncfusion Pivot Table. This repository includes a Web API Controller ([`MyWebService`](../MyWebService/)) for retrieving data from a MongoDB, as well as a quick start sample in the TypeScript platform that displays the retrieved data in a Syncfusion Pivot Table.
 
 ## Project prerequisites
 
@@ -12,11 +10,11 @@ Before beginning work on the server and client projects, ensure the following so
 * [Node.js](https://nodejs.org/en/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)
-* Compatible versions of [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/ ) and [.NET Core SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later installed on your machine
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/ ) and [.NET Core SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later installed on your machine
 
 ## How to run this application?
 
-* To run this application, clone the `how-to-bind-MongoDB-database-to-pivot-table` repository and then open **PivotController** in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:7105`.
+* To run this application, clone the [`how-to-bind-MongoDB-to-pivot-table`](https://github.com/SyncfusionExamples/how-to-bind-MongoDB-database-to-pivot-table.git) repository and then open **MyWebService** project in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:44346`.
 
 *  Now open TypeScript sample in Visual Studio Code and and install the necessary npm packages using the following command.
 
@@ -24,7 +22,7 @@ Before beginning work on the server and client projects, ensure the following so
 npm install
 ```
 
-* Initialize the Pivot Table, map the hosted URL, prepare and add a pivot report, and finally run your project using the following command to achieve the desired result.
+* Initialize the Pivot Table, map the hosted URL, create a pivot report, and finally run your project using the following command to achieve the desired result.
 
 ```sh
 npm run start

@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "PivotController": {
+    "MyWebService": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
