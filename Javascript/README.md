@@ -1,6 +1,6 @@
 # How to bind MongoDB to a Pivot Table
 
-A quick start project for connecting a MongoDB to a Syncfusion Pivot Table. This repository includes a Web API Controller ([MyWebService](../MyWebService/)) for retrieving data from a MongoDB, as well as a quick start sample in the TypeScript platform that displays the retrieved data in a Syncfusion Pivot Table.
+A quick start project for connecting a MongoDB to a Syncfusion Pivot Table. This repository includes a Web API Controller ([MyWebService](../MyWebService/)) for retrieving data from a MongoDB, as well as a quick start sample in the JavaScript platform that displays the retrieved data in a Syncfusion Pivot Table.
 
 ## Project prerequisites
 
