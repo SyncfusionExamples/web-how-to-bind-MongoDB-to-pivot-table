@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.EJS().PivotView("PivotView").Height("300").DataSourceSettings(
+        dataSource => dataSource.Url("https://localhost:44346/pivot"
+    ).ExpandAll(false).EnableSorting(true
+    ).Columns(columns =>
+    {
+        columns.Name("Year").Add();
+    }).Rows(rows =>
+    {
+        rows.Name("Country").Add();
+        rows.Name("Products").Add();
+    }).Values(values =>
+    {
+        values.Name("Sold").Caption("Units Sold").Add();
+        values.Name("Amount").Caption("Sold Amount").Add();
+    })).ShowFieldList(true).Render()
