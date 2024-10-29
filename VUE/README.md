@@ -25,5 +25,5 @@ npm install
 * Initialize the Pivot Table, map the hosted URL, create a pivot report, and finally run your project using the following command to achieve the desired result.
 
 ```sh
-npm run dev
+npm run serve
 ```
