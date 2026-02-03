@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@syncfusion/ej2-react-grids": "^20.2.36",
-    "@syncfusion/ej2-react-pivotview": "^20.2.36",
+    "@syncfusion/ej2-react-grids": "32.1.19",
+    "@syncfusion/ej2-react-pivotview": "32.1.19",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
